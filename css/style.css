@@ -504,13 +504,13 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 /* ==================================================
-  Features Styling
+  Serviços
   ================================================== */
-.features {
+.servicos {
   padding-bottom: 45px;
 }
 
-.features h2 {
+.servicos h2 {
   color: #199EB8;
 }
 
@@ -579,35 +579,35 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 /* ==================================================
-  Portfolio Styling
+  Receiras Fit
   ================================================== */
-.portfolio {
+.receitas_fit {
   background-color: #edf6ff;
   padding-bottom: 0;
 }
 
-.portfolio h2 {
+.receitas_fit h2 {
   color: #199EB8;
   margin-bottom: 25px;
 }
 
-.portfolio-grid {
+.receitas_fit-grid {
   margin-top: 65px;
 }
 
-.portfolio-grid .row {
+.receitas_fit-grid .row {
   margin: 0;
 }
 
-.portfolio-grid .row > div {
+.receitas_fit-grid .row > div {
   padding: 0;
 }
 
-.portfolio-grid .row > div .card img {
+.receitas_fit-grid .row > div .card img {
   width: 100%;
 }
 
-.portfolio-grid .row > div .card .portfolio-over {
+.receitas_fit-grid .row > div .card .receitas_fit-over {
   position: absolute;
   display: table-cell;
   vertical-align: middle;
@@ -625,7 +625,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   transition: all 0.3s ease;
 }
 
-.portfolio-grid .row > div .card .portfolio-over > div {
+.receitas_fit-grid .row > div .card .receitas_fit-over > div {
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -633,18 +633,18 @@ body.mobile-nav-active #mobile-nav-toggle {
   transform: translateY(-50%);
 }
 
-.portfolio-grid .row > div .card .portfolio-over .card-title {
+.receitas_fit-grid .row > div .card .receitas_fit-over .card-title {
   color: #fff;
   font-size: 30px;
 }
 
-.portfolio-grid .row > div .card .portfolio-over .card-text {
+.receitas_fit-grid .row > div .card .receitas_fit-over .card-text {
   color: #fff;
   opacity: .75;
   padding: 0 45px;
 }
 
-.portfolio-grid .row > div .card:hover .portfolio-over {
+.receitas_fit-grid .row > div .card:hover .receitas_fit-over {
   opacity: 1;
   visibility: visible;
 }
@@ -896,7 +896,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   .cta {
     padding: 5px 0;
   }
-  .features {
+  .servicos {
     padding-bottom: 5px;
   }
   p,
@@ -935,10 +935,10 @@ body.mobile-nav-active #mobile-nav-toggle {
   .feature-col {
     padding-bottom: 30px;
   }
-  .portfolio-grid .card h3.card-title {
+  .receitas_fit-grid .card h3.card-title {
     font-size: 18px !important;
   }
-  .portfolio-grid .card .card-text {
+  .receitas_fit-grid .card .card-text {
     font-size: 13px;
   }
   .team .team-over {
