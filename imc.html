@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Cláudya Nutricionista</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,700|Roboto:400,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/style.css">
+
+
+
+<link rel="canonical" href="http://www.calculoimc.com.br/" />
+    <link rel="stylesheet" type="text/css" media="screen,projection"
+        href="http://www.calculoimc.com.br/arquivos/style_screen.css?v=1.0.1b5" />
+<link rel="stylesheet" type="text/css" media="screen,projection"
+	href="http://www.google.com/cse/api/branding.css" />
+<link rel="shortcut icon" href="http://www.calculoimc.com.br/favicon.ico" />
+
+<script type="text/javascript"
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript"
+	src="http://www.calculoimc.com.br/jscript.js"></script>
+<title>Cláudya Nutricionista</title>
+</head>
+
+<body>
+        <img class="banner" src="img/banner5.jpg" alt="">
+
+        <header id="header">
+          <div class="container">
+                <nav id="nav-menu-container">
+                        <ul class="nav-menu">
+                            <li><a href="index.html">Início</a></li>
+                            <li><a href="#galeria">Galeria</a></li>
+                            <li><a href="#servicos">Serviços</a></li>
+        
+        
+                            <li><a href="#receitas_fit">Receitas Fit </a>
+                                <ul>
+                                    <li><a href="panqueca.html">Panquecas de Aveia</a></li>
+                                    <li><a href="canapes.html">Canapés Agridoces</a></li>
+                                    <li><a href="falafel.html">Falafel Simples</a></li>
+                                    <li><a href="chips.html">Chips de Batata doce</a></li>
+                                    <li><a href="batata_rustica.html">Batata Rústica</a></li>
+                                    <li><a href="bolo_frango.html">Bolo de Frango</a></li>
+                                    <li><a href="bolo_peito_peru.html">Bolo de Peito de Perú</a></li>
+                                    <li><a href="bolo_peixe.html">Bolo de Peixe</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="imc.html">Calculadora IMC</a></li>
+                            <li><a href="#contato">Contato</a></li>
+                        </ul>
+                    </nav>
+      
+            <!-- Redes sociais -->
+            <nav class="nav social-nav pull-right d-none d-lg-inline">
+              <a href="https://twitter.com/?lang=pt-br"><i class="fab fa-twitter"></i></a>
+              <a href="https://pt-br.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://br.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://mail.google.com/mail/u/0/#"><i class="fa fa-envelope"></i></a>
+            </nav>
+          </div>
+        </header>
+
+
+
+
+
+<div id="fb-root"></div>
+<script type="text/javascript">
+
+</script>
+
+<div id="form-imc">
+    <h2>Calcular o meu IMC</h2> 
+    	<p>Digite o seu peso e a sua altura no formul&aacute;rio abaixo para calcular o seu IMC.</p>
+	<form action="#" id="formimc" onsubmit="return(calcularIMC());">
+		<input type="text" id="peso" name="peso" value="peso (em kg)" class="deactivated" onfocus="ctrlFocusInput('peso');" onblur="ctrlBlurInput('peso');" /><label for="peso"> kg</label>
+		<input type="text" id="altura" name="altura" value="altura (em metros)" class="deactivated" onfocus="ctrlFocusInput('altura');" onblur="ctrlBlurInput('altura');" /><label for="altura"> m</label>
+		<input type="submit" value="Calcular IMC" />
+	</form> 
+</div>
+
+<div id="result">
+	<h3>Resultado</h3>
+	<p id="resultado_nr">&nbsp;</p> 
+	<p id="resultado_msg">&nbsp;</p>
+	<p>Para sua altura, o peso ideal est&aacute; entre: <span id="resultado_ideal_min"></span>kg e <span id="resultado_ideal_max"></span>kg</p>
+</div>
+
+<table id="tabela-resultado-imc"> 
+	<thead> 
+		<tr> 
+			<td class="td-first-col">Resultado</td> 
+			<td>Situa&ccedil;&atilde;o</td> 
+		</tr> 
+	</thead> 
+	<tbody> 
+		<tr> 
+			<td class="td-first-col">Abaixo de 17</td> 
+			<td>Muito abaixo do <em>peso</em></td> 
+		</tr> 
+		<tr> 
+			<td class="td-first-col">Entre 17 e 18,49</td> 
+			<td>Abaixo do <em>peso</em></td> 
+		</tr> 
+		<tr> 
+			<td class="td-first-col">Entre 18,5 e 24,99</td> 
+			<td><em>Peso</em> normal</td> 
+		</tr> 
+		<tr> 
+			<td class="td-first-col">Entre 25 e 29,99</td> 
+			<td>Acima do <em>peso</em></td> 
+		</tr> 
+		<tr> 
+			<td class="td-first-col">Entre 30 e 34,99</td> 
+			<td><em>Obesidade</em> I</td> 
+		</tr> 
+		<tr> 
+			<td class="td-first-col">Entre 35 e 39,99</td> 
+			<td><em>Obesidade</em> II (severa)</td> 
+		</tr> 
+		<tr> 
+			<td class="td-first-col">Acima de 40</td> 
+			<td><em>Obesidade</em> III (m&oacute;rbida)</td> 
+		</tr> 
+	</tbody> 
+</table> 
+
+
+
+</body>
+</html>
