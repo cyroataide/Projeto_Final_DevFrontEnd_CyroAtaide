@@ -17,7 +17,9 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
     crossorigin="anonymous">
 
-  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="js/jquery-3.3.1.min.js">
+  
 
   <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/magnific-popup.css">
@@ -25,7 +27,7 @@
 
 
 
-
+  <script src="js/jquery.waypoints.min.js"></script>
   <!-- Animação texto -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="js/typed.custom.js" type="text/javascript"></script>
@@ -124,10 +126,6 @@
 
 
   <!-- Galeria -->
-
-
-
-
   <section class="galeria" id="galeria">
     <div class="block bg-primary block-pd-lg block-bg-overlay text-center" data-bg-img="img/parallax-bg.jpg"
       data-settings='{"stellar-background-ratio": 0.6}' data-toggle="parallax-bg">
@@ -368,7 +366,7 @@
       <div class="row">
         <div class="col-lg-3 col-sm-6 col-xs-12">
           <div class="card card-block">
-            <a href="#"><img alt="" src="img/receitas/Panqueca.jpg">
+            <a href="panqueca.html"><img alt="" src="img/receitas/Panqueca.jpg">
               <div class="receitas_fit-over">
                 <div>
                   <h3 class="card-title">
@@ -386,7 +384,7 @@
 
         <div class="col-lg-3 col-sm-6 col-xs-12">
           <div class="card card-block">
-            <a href="#"><img alt="" src="img/receitas/canapes.jpg">
+            <a href="canapes.html"><img alt="" src="img/receitas/canapes.jpg">
               <div class="receitas_fit-over">
                 <div>
                   <h3 class="card-title">
@@ -404,7 +402,7 @@
 
         <div class="col-lg-3 col-sm-6 col-xs-12">
           <div class="card card-block">
-            <a href="#"><img alt="" src="img/receitas/falafel.jpg">
+            <a href="falafel.html"><img alt="" src="img/receitas/falafel.jpg">
               <div class="receitas_fit-over">
                 <div>
                   <h3 class="card-title">
@@ -422,7 +420,7 @@
 
         <div class="col-lg-3 col-sm-6 col-xs-12">
           <div class="card card-block">
-            <a href="#"><img alt="" src="img/receitas/batata_chips.jpg">
+            <a href="chips.html"><img alt="" src="img/receitas/batata_chips.jpg">
               <div class="receitas_fit-over">
                 <div>
                   <h3 class="card-title">
@@ -442,7 +440,7 @@
       <div class="row">
         <div class="col-lg-3 col-sm-6 col-xs-12">
           <div class="card card-block">
-            <a href="#"><img alt="" src="img/receitas/batata_ruster.jpg">
+            <a href="batata_rustica.html"><img alt="" src="img/receitas/batata_ruster.jpg">
               <div class="receitas_fit-over">
                 <div>
                   <h3 class="card-title">
@@ -460,7 +458,7 @@
 
         <div class="col-lg-3 col-sm-6 col-xs-12">
           <div class="card card-block">
-            <a href="#"><img alt="" src="img/receitas/bolo.jpg">
+            <a href="bolo_frango.html"><img alt="" src="img/receitas/bolo.jpg">
               <div class="receitas_fit-over">
                 <div>
                   <h3 class="card-title">
@@ -478,7 +476,7 @@
 
         <div class="col-lg-3 col-sm-6 col-xs-12">
           <div class="card card-block">
-            <a href="#"><img alt="" src="img/receitas/bolo_frango.jpg">
+            <a href="bolo_peito_peru.html"><img alt="" src="img/receitas/bolo_frango.jpg">
               <div class="receitas_fit-over">
                 <div>
                   <h3 class="card-title">
@@ -496,7 +494,7 @@
 
         <div class="col-lg-3 col-sm-6 col-xs-12">
           <div class="card card-block">
-            <a href="#"><img alt="" src="img/receitas/bolo_peixe.jpg">
+            <a href="bolo_peixe.html"><img alt="" src="img/receitas/bolo_peixe.jpg">
               <div class="receitas_fit-over">
                 <div>
                   <h3 class="card-title">
@@ -516,7 +514,7 @@
   </section>
   <!-- /Receitas Fit -->
   
-  <!-- @component: footer -->
+  <!-- Contato -->
 
   <section id="contato">
     <div class="container">
@@ -531,17 +529,22 @@
           <div class="info">
             <div>
               <i class="fa fa-map-marker"></i>
-              <p>A108 Adam Street<br>New York, NY 535022</p>
+              <p>CLS 414/415 Bloco A - Lj 166<br>
+                Em frente a Academia SMART FIT <br>
+                Asa Sul, Brasília - DF
+                CEP: 70.297-400</p>
             </div>
 
             <div>
               <i class="fa fa-envelope"></i>
-              <p>info@example.com</p>
+              <p>info@claudyanutricionista.com</p>
             </div>
 
             <div>
               <i class="fa fa-phone"></i>
-              <p>+1 5589 55488 55s</p>
+              <p>(61) 3333-4444</p>
+              <p>(61) 9 9999-9999 - Whatsapp</p>
+              
             </div>
 
           </div>
@@ -549,21 +552,123 @@
 
         <div class="col-lg-5 col-md-8">
           <div class="form">
-
-              <div class="pre-loader" style="display: none">
-                  <div class="lds-ring">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                  </div>
-                </div>
-
-
-                <main role="main">
-                    <div id="conteudo">
+                    <div class="container"> 
+                      <form method="post" class="form-horizontal">
+                        <fieldset>
+                                         
+                          <div class="control-group">
+                            <label class="control-label" for="type">Tipo de atendimento</label>
+                            <div class="controls">
+                              <select name="type" id="type">
+                                <option value="">Paciente: Marcação ou retorno</option>
+                                <option value="general">Consultoria para empresas</option>
+                                <option value="sales">Dúvidas em geral</option>
+                                <option value="support">Indicação premiada</option>
+                              </select>
+                            </div>
+                          </div>
+                      
+                          <div class="control-group">
+                            <label class="control-label" for="name">Nome</label>
+                            <div class="controls">
+                              <input class="input-xlarge" type="text" name="name" id="nome" value="" maxlength="50">
+                            </div>
+                          </div>
                 
+                          <div class="control-group">
+                            <label class="control-label" for="text">Celular</label>
+                            <div class="controls">
+                              <input class="input-xlarge" type="text" name="email" id="celular" value="" maxlength="11">
+                            </div>
+                          </div>
+                    
+                          <div class="control-group">
+                            <label class="control-label" for="email">E-mail</label>
+                            <div class="controls">
+                              <input class="input-xlarge" type="text" name="email" id="email" value="" maxlength="150">
+                            </div>
+                          </div>
+                        
+                          <div class="control-group">
+                            <label class="control-label" for="message">Mensagem</label>
+                            <div class="controls">
+                              <textarea class="input-xlarge" name="mensagem" id="mensagem"></textarea>
+                            </div>
+                          </div>
+                          
+                          <div class="control-group">
+                            <div class="controls">
+                              <label class="checkbox">
+                                <input name="subscribe" id="subscribe" type="checkbox">
+                                Quero receber novidades por e-mail.
+                              </label>
+                            </div>
+                          </div>          
+                        </fieldset>                        
+                        
+                        <div class="form-actions">
+                          <input type="submit" name="submit" id="submit" value="Enviar" class="btn btn-primary">
+                        </div>
+                      </form>  
                     </div>
+                    
+                    <!-- include jQuery library -->
+                    <script src="//code.jquery.com/jquery-latest.js"></script>
+                    <script>
+                    $(document).ready(function () {
+                      /*
+                       * check browser supports local storage
+                       */
+                      if (localStorage) {
+                        /*
+                         * if form field values exist in local storage use
+                         * them to populate the form when the page loads
+                         */
+                        if (localStorage.type) {
+                          $("#type").find("option[value=" + localStorage.type + "]").attr("selected", true);
+                        }
+                        if (localStorage.name) {
+                          $("#name").val(localStorage.name);
+                        }
+                        if (localStorage.email) {
+                          $("#email").val(localStorage.email);
+                        }
+                        if (localStorage.message) {
+                          $("#message").val(localStorage.message);
+                        }
+                        if (localStorage.subscribe === "checked") {
+                          $("#subscribe").attr("checked", "checked");
+                        }
+                        
+                        /*
+                         * when a form field changes store it's value in local storage
+                         */
+                        $("input[type=text],select,textarea").change(function(){
+                          $this = $(this);
+                          localStorage[$this.attr("name")] = $this.val();
+                        });
+                        $("input[type=checkbox]").change(function(){
+                          $this = $(this);
+                          localStorage[$this.attr("name")] = $this.attr("checked");
+                        });
+                        
+                        $("form")
+                          /*
+                           * clear local storage when the form is submitted
+                           */
+                          .submit(function(){
+                            localStorage.clear();
+                          })
+                          /* 
+                           * output local storage to the console each time the form changes
+                           * (you may want to remove this code on the production server)
+                           */
+                          .change(function(){
+                            console.log(localStorage);
+                          });
+                      }
+                    });
+                    </script>
 
 
 
@@ -576,36 +681,8 @@
 
 
 
-            <div id="sendmessage">Your message has been sent. Thank you!</div>
-            <div id="errormessage"></div>
-            <form action="" method="post" role="form" class="contatoForm">
-              <div class="form-group">
-                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4"
-                  data-msg="Please enter at least 4 chars" />
-                <div class="validation"></div>
-              </div>
-              <div class="form-group">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email"
-                  data-msg="Please enter a valid email" />
-                <div class="validation"></div>
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4"
-                  data-msg="Please enter at least 8 chars of subject" />
-                <div class="validation"></div>
-              </div>
-              <div class="form-group">
-                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us"
-                  placeholder="Message"></textarea>
-                <div class="validation"></div>
-              </div>
-              <div class="text-center"><button type="submit">Enviar</button></div>
-            </form>
-          </div>
-        </div>
 
-      </div>
-    </div>
+
   </section>
 
   <footer class="site-footer">
@@ -630,7 +707,7 @@
               </li>
 
               <li class="list-inline-item">
-                <a href="#">Início</a>
+                <a href="index.html">Início</a>
               </li>
 
               <li class="list-inline-item">
@@ -660,10 +737,10 @@
 
 
   <!-- Bibliotecas Galeria -->
+  
   <script src="js/jquery.min.js"></script>
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
+
+
   <script src="js/owl.carousel.min.js"></script>
   <script src="js/jquery.magnific-popup.min.js"></script>
   <script src="js/main.js"></script>
@@ -682,8 +759,6 @@
   <script src="lib/jquery/jquery.min.js"></script>
 
   <script src="lib/waypoints/waypoints.min.js"></script>
-  <script src="js/typed.custom.js" type="text/javascript"></script>
-
 
   <script src="lib/counterup/counterup.min.js"></script>
   <script src="lib/waypoints/waypoints.min.js"></script>
@@ -695,23 +770,10 @@
   <!-- Template Specisifc Custom Javascript File -->
   <script src="js/custom.js"></script>
 
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script>
-    $(function () {
-      $('.pre-loader')
-        .hide()  // Hide it initially
-        .ajaxStart(function () {
-          $(this).show();
-        })
-        .ajaxStop(function () {
-          $(this).hide();
-        })
-        ;
-    });
-  </script>
-  <script src="js/rotas.js"></script>
+
+
+  
+
 
 
 </body>

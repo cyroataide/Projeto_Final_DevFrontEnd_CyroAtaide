@@ -1,128 +1,350 @@
 <!DOCTYPE html>
-
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    
-    <title>HTML5 Local Storage Example</title>
 
-    <!-- include Bootstrap CSS for layout -->
-    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet">
-  </head>
-  
-  <body>
-    <div class="container">
-      <h1>HTML5 Local Storage Example</h1>
-      
-      <form method="post" class="form-horizontal">
-        <fieldset>
-          <legend>Enquiry Form</legend>  
+<head>
+  <meta charset="utf-8">
+  <title>Cláudya Nutricionista</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
 
-          <div class="control-group">
-            <label class="control-label" for="type">Type of enquiry</label>
-            <div class="controls">
-              <select name="type" id="type">
-                <option value="">Please select</option>
-                <option value="general">General</option>
-                <option value="sales">Sales</option>
-                <option value="support">Support</option>
-              </select>
-            </div>
-          </div>
-      
-          <div class="control-group">
-            <label class="control-label" for="name">Name</label>
-            <div class="controls">
-              <input class="input-xlarge" type="text" name="name" id="name" value="" maxlength="50">
-            </div>
-          </div>
-    
-          <div class="control-group">
-            <label class="control-label" for="email">Email Address</label>
-            <div class="controls">
-              <input class="input-xlarge" type="text" name="email" id="email" value="" maxlength="150">
-            </div>
-          </div>
-        
-          <div class="control-group">
-            <label class="control-label" for="message">Message</label>
-            <div class="controls">
-              <textarea class="input-xlarge" name="message" id="message"></textarea>
-            </div>
-          </div>
-          
-          <div class="control-group">
-            <div class="controls">
-              <label class="checkbox">
-                <input name="subscribe" id="subscribe" type="checkbox">
-                Subscribe to our newsletter
-              </label>
-            </div>
-          </div>          
-        </fieldset>                        
-        
-        <div class="form-actions">
-          <input type="submit" name="submit" id="submit" value="Send" class="btn btn-primary">
-        </div>
-      </form>  
-    </div>
-    
-    <!-- include jQuery library -->
-    <script src="//code.jquery.com/jquery-latest.js"></script>
-    <script>
-    $(document).ready(function () {
-      /*
-       * check browser supports local storage
-       */
-      if (localStorage) {
-        /*
-         * if form field values exist in local storage use
-         * them to populate the form when the page loads
-         */
-        if (localStorage.type) {
-          $("#type").find("option[value=" + localStorage.type + "]").attr("selected", true);
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,700|Roboto:400,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/style.css">
+
+
+
+
+  <!-- Animação texto -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="js/typed.custom.js" type="text/javascript"></script>
+  <script>
+    $(function () {
+      $("#typed").typed({
+        strings: [" mais de sua saúde!", " mais de sua disposição!", " muito mais de sua vida!", " dos benefícios da Nutrição! Cuide-se!!!"],
+        typeSpeed: 30,
+        callback: function () {
+          shift();
         }
-        if (localStorage.name) {
-          $("#name").val(localStorage.name);
-        }
-        if (localStorage.email) {
-          $("#email").val(localStorage.email);
-        }
-        if (localStorage.message) {
-          $("#message").val(localStorage.message);
-        }
-        if (localStorage.subscribe === "checked") {
-          $("#subscribe").attr("checked", "checked");
-        }
-        
-        /*
-         * when a form field changes store it's value in local storage
-         */
-        $("input[type=text],select,textarea").change(function(){
-          $this = $(this);
-          localStorage[$this.attr("name")] = $this.val();
-        });
-        $("input[type=checkbox]").change(function(){
-          $this = $(this);
-          localStorage[$this.attr("name")] = $this.attr("checked");
-        });
-        
-        $("form")
-          /*
-           * clear local storage when the form is submitted
-           */
-          .submit(function(){
-            localStorage.clear();
-          })
-          /* 
-           * output local storage to the console each time the form changes
-           * (you may want to remove this code on the production server)
-           */
-          .change(function(){
-            console.log(localStorage);
-          });
-      }
+      });
     });
-    </script>
-  </body>
+  </script>
+
+</head>
+
+<body>
+  <img class="banner" src="img/banner5.jpg" alt="">
+
+  <header id="header">
+    <div class="container">
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+
+
+          <li><a href="#receitas_fit">Receitas Fit </a>
+            <ul>
+              <li><a href="panqueca.html">Panquecas de Aveia</a></li>
+              <li><a href="canapes.html">Canapés Agridoces</a></li>
+              <li><a href="falafel.html">Falafel Simples</a></li>
+              <li><a href="chips.html">Chips de Batata doce</a></li>
+              <li><a href="batata_rustica.html">Batata Rústica</a></li>
+              <li><a href="bolo_frango.html">Bolo de Frango</a></li>
+              <li><a href="bolo_peito_peru.html">Bolo de Peito de Perú</a></li>
+              <li><a href="bolo_peixe.html">Bolo de Peixe</a></li>
+            </ul>
+          </li>
+          <li><a href="imc.html">Calculadora IMC</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <!-- Redes sociais -->
+      <nav class="nav social-nav pull-right d-none d-lg-inline">
+        <a href="https://twitter.com/?lang=pt-br"><i class="fab fa-twitter"></i></a>
+        <a href="https://pt-br.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://br.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://mail.google.com/mail/u/0/#"><i class="fa fa-envelope"></i></a>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- Contato -->
+
+  <section id="contato">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h2 class="section-title">Contato</h2>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-3 col-md-4">
+          <div class="info">
+            <div>
+              <i class="fa fa-map-marker"></i>
+              <p>CLS 414/415 Bloco A - Lj 166<br>
+                Em frente a Academia SMART FIT <br>
+                Asa Sul, Brasília - DF
+                CEP: 70.297-400</p>
+            </div>
+
+            <div>
+              <i class="fa fa-envelope"></i>
+              <p>info@claudyanutricionista.com</p>
+            </div>
+
+            <div>
+              <i class="fa fa-phone"></i>
+              <p>(61) 3333-4444</p>
+              <p>(61) 9 9999-9999 - Whatsapp</p>
+              
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-lg-5 col-md-8">
+          <div class="form">
+                    <div class="container"> 
+                      <form method="post" class="form-horizontal">
+                        <fieldset>
+                                         
+                          <div class="control-group">
+                            <label class="control-label" for="type">Tipo de atendimento</label>
+                            <div class="controls">
+                              <select name="type" id="type">
+                                <option value="">Paciente: Marcação ou retorno</option>
+                                <option value="general">Consultoria para empresas</option>
+                                <option value="sales">Dúvidas em geral</option>
+                                <option value="support">Indicação premiada</option>
+                              </select>
+                            </div>
+                          </div>
+                      
+                          <div class="control-group">
+                            <label class="control-label" for="name">Nome</label>
+                            <div class="controls">
+                              <input class="input-xlarge" type="text" name="name" id="nome" value="" maxlength="50">
+                            </div>
+                          </div>
+                
+                          <div class="control-group">
+                            <label class="control-label" for="text">Celular</label>
+                            <div class="controls">
+                              <input class="input-xlarge" type="text" name="email" id="celular" value="" maxlength="11">
+                            </div>
+                          </div>
+                    
+                          <div class="control-group">
+                            <label class="control-label" for="email">E-mail</label>
+                            <div class="controls">
+                              <input class="input-xlarge" type="text" name="email" id="email" value="" maxlength="150">
+                            </div>
+                          </div>
+                        
+                          <div class="control-group">
+                            <label class="control-label" for="message">Mensagem</label>
+                            <div class="controls">
+                              <textarea class="input-xlarge" name="mensagem" id="mensagem"></textarea>
+                            </div>
+                          </div>
+                          
+                          <div class="control-group">
+                            <div class="controls">
+                              <label class="checkbox">
+                                <input name="subscribe" id="subscribe" type="checkbox">
+                                Quero receber novidades por e-mail.
+                              </label>
+                            </div>
+                          </div>          
+                        </fieldset>                        
+                        
+                        <div class="form-actions">
+                          <input type="submit" name="submit" id="submit" value="Enviar" class="btn btn-primary">
+                        </div>
+                      </form>  
+                    </div>
+                    
+                    <!-- include jQuery library -->
+                    <script src="//code.jquery.com/jquery-latest.js"></script>
+                    <script>
+                    $(document).ready(function () {
+                      /*
+                       * check browser supports local storage
+                       */
+                      if (localStorage) {
+                        /*
+                         * if form field values exist in local storage use
+                         * them to populate the form when the page loads
+                         */
+                        if (localStorage.type) {
+                          $("#type").find("option[value=" + localStorage.type + "]").attr("selected", true);
+                        }
+                        if (localStorage.name) {
+                          $("#name").val(localStorage.name);
+                        }
+                        if (localStorage.email) {
+                          $("#email").val(localStorage.email);
+                        }
+                        if (localStorage.message) {
+                          $("#message").val(localStorage.message);
+                        }
+                        if (localStorage.subscribe === "checked") {
+                          $("#subscribe").attr("checked", "checked");
+                        }
+                        
+                        /*
+                         * when a form field changes store it's value in local storage
+                         */
+                        $("input[type=text],select,textarea").change(function(){
+                          $this = $(this);
+                          localStorage[$this.attr("name")] = $this.val();
+                        });
+                        $("input[type=checkbox]").change(function(){
+                          $this = $(this);
+                          localStorage[$this.attr("name")] = $this.attr("checked");
+                        });
+                        
+                        $("form")
+                          /*
+                           * clear local storage when the form is submitted
+                           */
+                          .submit(function(){
+                            localStorage.clear();
+                          })
+                          /* 
+                           * output local storage to the console each time the form changes
+                           * (you may want to remove this code on the production server)
+                           */
+                          .change(function(){
+                            console.log(localStorage);
+                          });
+                      }
+                    });
+                    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </section>
+
+  <footer class="site-footer">
+    <div class="bottom">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-6 col-xs-12 text-lg-left text-center">
+            <p class="copyright-text">
+              © Cláudya Nutricionista
+            </p>
+            <div class="credits">
+
+              Desenvolvido por <a href="https:www.opennetbr.com.br/">OpenNetBR.com.br</a> by Cyro Ataíde
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-xs-12 text-lg-right text-center">
+            <ul class="list-inline">
+              <li class="list-inline-item">
+                <a href="index.html">Home</a>
+              </li>
+
+              <li class="list-inline-item">
+                <a href="index.html">Início</a>
+              </li>
+
+              <li class="list-inline-item">
+                <a href="#servicos">Serviços</a>
+              </li>
+
+              <li class="list-inline-item">
+                <a href="#receitas_fit">Receitas Fit</a>
+              </li>
+
+              <li class="list-inline-item">
+                <a href="#team">Team</a>
+              </li>
+
+              <li class="list-inline-item">
+                <a href="#contato">Contato</a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </footer>
+  <a class="scrolltop" href="#"><span class="fa fa-angle-up"></span></a>
+
+
+
+  <!-- Bibliotecas Galeria -->
+  
+  <script src="js/jquery.min.js"></script>
+
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/main.js"></script>
+
+
+
+
+
+  <!-- Required JavaScript Libraries -->
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/tether/js/tether.min.js"></script>
+  <script src="lib/stellar/stellar.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/jquery/jquery.min.js"></script>
+
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="js/typed.custom.js" type="text/javascript"></script>
+
+
+  <script src="lib/counterup/counterup.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/easing/easing.js"></script>
+  <script src="lib/stickyjs/sticky.js"></script>
+  <script src="lib/parallax/parallax.js"></script>
+  <script src="lib/lockfixed/lockfixed.min.js"></script>
+
+  <!-- Template Specisifc Custom Javascript File -->
+  <script src="js/custom.js"></script>
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+
+
+
+
+</body>
+
 </html>
